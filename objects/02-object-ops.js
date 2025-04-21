@@ -86,15 +86,45 @@ for (let restaurant of restaurants) {
 	Create two objects representing different local attractions (zoo, gardens, museums, etc), each with the following properties: name, location, adultTicketPrice, childTicketPrice, and famousFeatures (array of three strings). Be creative! Place the objects in an array.
 */
 
-// TODO: create objects and put them in an array
+let zoo = {
+	name: "The Mellow Zoo",
+	location: "Mellow Valley, MO",
+	adultTicketPrice: 35,
+	childTicketPrice: 15,
+	famousFeatures: ["Giraffe Feeding", "Petting Zoo", "Camel Rides"]	
 
+};
+
+let aquarium = {
+	name: "Blue City Aquarium",
+	location: "Blue City, WA",
+	adultTicketPrice: 25,
+	childTicketPrice: 10,
+	famousFeatures: ["Shark Tank", "Shark Feeding", "Swim with Sharks"],
+};
+
+
+// TODO: create objects and put them in an array
+let attractions = [zoo, aquarium];
+console.log(attractions);
 /*
 	Loop through the array, then within that for loop, use a for...in loop to grab values from each key and print them to the console. If you come across a key storing an array, print each element in the array instead of the array itself. Remember that you need a new index variable with each nested FOR loop (i, j are common).
 
 	NOTE: This is a tough one to think through when you're new at this. If you get completely stuck, reference the solution that accompanies this starter code. But make an effort to figure it out yourself first!
 */
 
-// TODO: use nested loops to print values inside objects
+// TODO: use nested loops to print values inside objects ******
+for (let places of attractions) {
+for (let values in places) {
+	if (Array.isArray(places[values])) {
+		for (let i=0; i < places[values].length; i++) {
+			console.log(places[values][i]);
+			}
+		}else {
+			console.log(places[values]);
+		}
+	}
+};
 
 /*
 	Last task: loop through the outer array and print a single template literal for each attraction using placeholders referencing the object at each index. Here's an example:
@@ -106,4 +136,6 @@ for (let restaurant of restaurants) {
 */
 
 // TODO: Print a template literal
-
+for (let places of attractions) {
+	console.log(`\n**********************************************\n${places.name} - ${places.location}\n**********************************************\nA favorite with the locals, the ${places.name} boasts over a dozen features, including the ${places.famousFeatures[0]}, ${places.famousFeatures[1]}, and ${places.famousFeatures[2]}. Admission is $${places.adultTicketPrice} for adults, $${places.childTicketPrice} for children ages 5-12, and free for children 4 and under.\n`);
+}
