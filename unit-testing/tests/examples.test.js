@@ -39,7 +39,13 @@ describe("The bucky object", () => {
     });
 
     // TODO: Write 2 tests for the value of nickname — it should be "Bucky" and NOT "The Winter Soldier"
+    test('should have they value "Bucky" for the nickname ',() => { 
+        expect(examples.bucky.nickname).toBe('Bucky');
+    });
 
+    test('',() =>{
+
+    });
 
     // Test that triggerWords includes "longing", "daybreak", and "homecoming"
     test("should have an array called 'triggerWords' that includes specific words", () => {
