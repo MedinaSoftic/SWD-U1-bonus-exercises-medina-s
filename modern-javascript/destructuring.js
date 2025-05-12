@@ -49,10 +49,14 @@ console.log(website);
 // YOUR TURN!
 
 // TODO: Create an array with several elements
-
-
+let mineCraftMobs = [    
+    creeper,
+    zombies,
+    chicken
+]
 // TODO: Destructure the array and assign variables
 // to each element
+
 
 
 // TODO: Print the values of the new variables

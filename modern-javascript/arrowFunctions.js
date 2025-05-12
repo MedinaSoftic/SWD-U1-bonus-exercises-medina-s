@@ -34,11 +34,18 @@ console.log(revStrAnonShort("yam"));
 // TODO: Store an anonymous function in a constant
 // Use arrow syntax to return a random element
 // Multiple lines of code OK
-
+let arr = [10, 20, 30, 40, 50];
+const randomNum= arr => {
+    let randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
+}
+console.log(`The random number for the arrow function in modren Js is ${randomNum(arr)}`);
 
 // TODO: Create an array of several elements as mock data
 // Call the function and pass in the array
 
+const array = ['a','b','c','d','e']
+console.log(randomNum(array))
 
 // TODO: BONUS: Try to rewrite your function as a single-line short 
 // form arrow function
